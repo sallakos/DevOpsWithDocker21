@@ -1,0 +1,17 @@
+version: '3.5'
+
+services:
+  redis:
+    image: redis
+  ex2-4-front:
+    image: ex2.3-front
+    ports:
+      - 5000:5000
+    container_name: ex2-4-front
+  ex2-4-back:
+    image: ex2.3-back
+    ports:
+      - 8080:8080
+    environment:
+      - REDIS_HOST=redis
+    container_name: ex2-4-back
