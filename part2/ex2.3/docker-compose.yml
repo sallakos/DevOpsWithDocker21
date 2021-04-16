@@ -1,0 +1,15 @@
+version: '3.5'
+
+services:
+  ex2-3-front:
+    build: ./example-frontend
+    image: ex2.3-front
+    ports:
+      - 5000:5000
+    container_name: ex2-3-front
+  ex2-3-back:
+    build: ./example-backend
+    image: ex2.3-back
+    ports:
+      - 8080:8080
+    container_name: ex2-3-back
